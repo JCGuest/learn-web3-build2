@@ -12,9 +12,9 @@ contract EIP20 is EIP20Interface {
     They allow one to customise the token contract & in no way influences the core functionality.
     Some wallets/interfaces might not even bother to look at this information.
     */
-    string public name = Hugo;
+    string public name = "Hugo";
     uint8 public decimals = 3;
-    string public symbol = HGO;
+    string public symbol = "HGO";
 
     function Hugo(
         uint256 _initialAmount,
@@ -22,11 +22,11 @@ contract EIP20 is EIP20Interface {
         uint8 _decimalUnits,
         string _tokenSymbol
     ) public {
-        balances[msg.sender] = _initialAmount; // Give the creator all initial tokens
+        balances[msg.sender] = 1000000000; // Give the creator all initial tokens
         totalSupply = _initialAmount; // Update total supply
-        name = _tokenName; // Set the name for display purposes
-        decimals = _decimalUnits; // Amount of decimals for display purposes
-        symbol = _tokenSymbol; // Set the symbol for display purposes
+        name = "Hugo"; // Set the name for display purposes
+        decimals = 3; // Amount of decimals for display purposes
+        symbol = "HGO"; // Set the symbol for display purposes
     }
 
     function transfer(address _to, uint256 _value)
